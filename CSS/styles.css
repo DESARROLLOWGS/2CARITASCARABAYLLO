@@ -290,4 +290,37 @@ button[type="submit"] {
     align-items: center;
   }
 }
+/* === FOOTER MODERNO === */
+footer {
+  background: #111;
+  color: #ccc;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 60px;
+}
 
+footer h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer .footer-socials {
+  margin-top: 20px;
+}
+
+footer .footer-socials a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #ccc;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+footer .footer-socials a:hover {
+  color: #a12020;
+}
