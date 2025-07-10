@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+.hero {
+  background: url('images/hero.jpg') no-repeat center center/cover;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #a12020;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.quienes-somos {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.quienes-somos h2 {
+  color: #a12020;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.bloques {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.bloque {
+  flex: 1 1 300px;
+  max-width: 500px;
+  background-color: #f8f8f8;
+  border-left: 5px solid #a12020;
+  padding: 25px 20px;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.bloque h3 {
+  color: #a12020;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.bloque p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.equipo {
+  padding: 60px 20px;
+  background-color: #a12020;
+  color: white;
+  text-align: center;
+}
+
+.equipo h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.equipo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.miembro {
+  background-color: white;
+  color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 220px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.miembro:hover {
+  transform: scale(1.05);
+}
+
+.miembro img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.noticias-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 60px 20px;
+}
+
+.noticias, .contacto {
+  flex: 1 1 45%;
+  margin-bottom: 40px;
+}
+
+.noticias h2, .contacto h2 {
+  color: #a12020;
+  margin-bottom: 20px;
+}
+
+.noticia {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-left: 5px solid #a12020;
+  margin-bottom: 20px;
+}
+
+.noticia h3 {
+  margin: 0 0 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+button[type="submit"] {
+  background-color: #a12020;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.social-buttons {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transform: translateY(-50%);
+}
+
+.social {
+  width: 40px;
+  height: 40px;
+  background-color: #a12020;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .noticias-contacto {
+    flex-direction: column;
+  }
+
+  .bloques {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .equipo-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
