@@ -38,17 +38,17 @@ const heroContent = document.querySelector('.hero-content');
 
 const heroSlides = [
   {
-    img: 'images/hero1.jpg',
+    img: 'IMAGES/hero1.jpeg',
     title: 'Solidaridad que transforma vidas',
     subtitle: 'Ayudamos a quienes más lo necesitan.'
   },
   {
-    img: 'images/hero2.jpg',
+    img: 'IMAGES/hero2.jpg',
     title: 'Manos que construyen esperanza',
     subtitle: 'Unidos por los que más sufren.'
   },
   {
-    img: 'images/hero3.jpg',
+    img: 'IMAGES/hero3.jpeg',
     title: 'Tu ayuda cambia historias',
     subtitle: 'Sé parte de nuestra misión.'
   }
