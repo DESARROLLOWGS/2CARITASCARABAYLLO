@@ -11,7 +11,7 @@ enlaces.forEach(enlace => {
   });
 });
 
-// Validación simple de formulario
+// Validación simple del formulario
 const formulario = document.querySelector('form');
 
 if (formulario) {
@@ -22,5 +22,12 @@ if (formulario) {
   });
 }
 
-// Slider (si deseas usar uno dinámico, aquí iría un Swiper o Flickity)
-// Por ahora, dejamos preparado el código para futura implementación.
+// Menú responsive tipo hamburguesa
+const menuToggle = document.getElementById('mobile-menu');
+const navList = document.querySelector('.nav-list');
+
+if (menuToggle && navList) {
+  menuToggle.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
+}
