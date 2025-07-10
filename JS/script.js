@@ -32,23 +32,23 @@ if (menuToggle && navList) {
   });
 }
 
-// Slider automático para HERO
+// Slider automático para HERO con transición fade
 const heroSection = document.querySelector('.hero');
 const heroContent = document.querySelector('.hero-content');
 
 const heroSlides = [
   {
-    img: 'IMAGES/hero1.jpeg',
+    img: 'images/hero1.jpg',
     title: 'Solidaridad que transforma vidas',
     subtitle: 'Ayudamos a quienes más lo necesitan.'
   },
   {
-    img: 'IMAGES/hero2.jpg',
+    img: 'images/hero2.jpg',
     title: 'Manos que construyen esperanza',
     subtitle: 'Unidos por los que más sufren.'
   },
   {
-    img: 'IMAGES/hero3.jpeg',
+    img: 'images/hero3.jpg',
     title: 'Tu ayuda cambia historias',
     subtitle: 'Sé parte de nuestra misión.'
   }
@@ -58,12 +58,19 @@ let currentSlide = 0;
 
 function cambiarHero() {
   const { img, title, subtitle } = heroSlides[currentSlide];
-  heroSection.style.backgroundImage = `url('${img}')`;
-  heroContent.innerHTML = `
-    <h1>${title}</h1>
-    <p>${subtitle}</p>
-    <a href="#quienes-somos" class="btn">Conócenos</a>
-  `;
+
+  heroContent.classList.remove('visible');
+
+  setTimeout(() => {
+    heroSection.style.backgroundImage = `url('${img}')`;
+    heroContent.innerHTML = `
+      <h1>${title}</h1>
+      <p>${subtitle}</p>
+      <a href="#quienes-somos" class="btn">Conócenos</a>
+    `;
+    heroContent.classList.add('visible');
+  }, 500);
+
   currentSlide = (currentSlide + 1) % heroSlides.length;
 }
 
