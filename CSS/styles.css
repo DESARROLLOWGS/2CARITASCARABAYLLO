@@ -85,7 +85,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* considerar eliminar para quitar la opacidad de la fotografía del fondo*/
+  background: rgba(0, 0, 0, 0.2); /* considerar eliminar para quitar la opacidad de la fotografía del fondo*/
   z-index: 0;
 }
 
