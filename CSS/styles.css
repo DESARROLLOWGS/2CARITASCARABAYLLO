@@ -359,8 +359,11 @@ footer .footer-socials a:hover {
 
 .card-proyecto img {
   width: 100%;
-  height: 150px;
+  height: 180px; /* Puedes ajustar entre 150–200px según tu gusto */
   object-fit: cover;
+  display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .card-proyecto h3 {
