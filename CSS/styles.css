@@ -376,3 +376,55 @@ footer .footer-socials a:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+/* =================================== ESTILOS VOLUNTARIADO ================================== */
+/* === VOLUNTARIADO === */
+.voluntariado {
+  background: #a12020;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.voluntariado h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.voluntariado-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card-voluntario {
+  background: white;
+  color: black;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-voluntario img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-voluntario h3 {
+  padding: 15px;
+  font-size: 1.2rem;
+  color: #000;
+  text-align: center;
+}
+
+.card-voluntario:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
