@@ -127,3 +127,33 @@ slides.forEach(slide => {
 closeBtn.addEventListener('click', () => {
   lightbox.style.display = 'none';
 });
+// Swipe táctil para galería
+let startX = 0;
+let isSwiping = false;
+
+wrapper.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+  isSwiping = true;
+});
+
+wrapper.addEventListener('touchmove', (e) => {
+  if (!isSwiping) return;
+  const moveX = e.touches[0].clientX;
+  const diff = startX - moveX;
+
+  if (Math.abs(diff) > 50) {
+    if (diff > 0) {
+      // swipe izquierda
+      index = (index + 1) % slides.length;
+    } else {
+      // swipe derecha
+      index = (index - 1 + slides.length) % slides.length;
+    }
+    updateSlider();
+    isSwiping = false;
+  }
+});
+
+wrapper.addEventListener('touchend', () => {
+  isSwiping = false;
+});
