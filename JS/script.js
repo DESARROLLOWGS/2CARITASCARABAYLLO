@@ -76,3 +76,54 @@ function cambiarHero() {
 
 setInterval(cambiarHero, 5000);
 window.addEventListener('load', cambiarHero);
+
+//========================================================================== Slider Galería
+const wrapper = document.querySelector('.galeria-wrapper');
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+const dotsContainer = document.querySelector('.dots');
+let index = 0;
+
+function updateSlider() {
+  wrapper.style.transform = `translateX(-${index * 100}%)`;
+  document.querySelectorAll('.dots span').forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
+}
+
+slides.forEach((_, i) => {
+  const dot = document.createElement('span');
+  dot.addEventListener('click', () => {
+    index = i;
+    updateSlider();
+  });
+  dotsContainer.appendChild(dot);
+});
+updateSlider();
+
+nextBtn.addEventListener('click', () => {
+  index = (index + 1) % slides.length;
+  updateSlider();
+});
+
+prevBtn.addEventListener('click', () => {
+  index = (index - 1 + slides.length) % slides.length;
+  updateSlider();
+});
+
+// Lightbox
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.querySelector('.lightbox-img');
+const closeBtn = document.querySelector('.close');
+
+slides.forEach(slide => {
+  slide.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = slide.querySelector('img').src;
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
